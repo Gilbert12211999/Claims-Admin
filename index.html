@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Photo Album</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page Body with Fixed Background Image */
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            height: 100%; /* Full height for the background to cover the screen */
+            min-height: 100vh; /* Ensure the body is at least the height of the viewport */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            background-color: #ccc; /* Fallback color in case the image is not loaded */
+        }
+
+        /* Background Image */
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/admins.jpg'); /* Set your background image here */
+            background-size: 80%; /* Image size set to 80% of the screen */
+            background-position: center;
+            background-attachment: fixed; /* Keeps the background fixed during scroll */
+            background-repeat: no-repeat;
+            z-index: 1; /* Behind all content */
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            z-index: 3; /* Ensure the header stays above the background */
+            color: #fff; /* White text for contrast */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds subtle shadow to text for better readability */
+        }
+
+        header h1 {
+            font-size: 3em;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        /* Gallery Styles */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+            z-index: 3;
+            width: 80%; /* Ensures gallery is not too wide */
+            max-width: 1200px; /* Ensures gallery width doesn't exceed 1200px */
+        }
+
+        .gallery .image-item {
+            display: flex;
+            justify-content: center; /* Centers image horizontally */
+            align-items: center; /* Centers image vertically */
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            background-color: #fff; /* White background behind image */
+            height: 350px; /* Fixed height for all images */
+            min-height: 300px; /* Ensures consistent sizing */
+            overflow: hidden;
+        }
+
+        .gallery .image-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery .image-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image fills the box while maintaining aspect ratio */
+            object-position: center; /* Centers the image within the box */
+            border-radius: 10px;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery .image-item img:hover {
+            opacity: 0.8;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 1em;
+            color: #fff; /* White text for footer */
+            z-index: 3;
+        }
+
+        footer p {
+            margin-top: 10px;
+        }
+
+        /* Moving Image */
+        .moving-image {
+            position: fixed;
+            top: 0; /* Starts from the top of the screen */
+            left: 0; /* Aligns to the left side of the screen */
+            width: 150px; /* Width of the moving image */
+            height: auto; /* Height is based on the image's aspect ratio */
+            z-index: 2; /* Ensures the image is above the background */
+            animation: moveUpDownLeft 5s ease-in-out infinite; /* Moves left side up and down */
+        }
+
+        .moving-image.right {
+            left: unset; /* Remove the left positioning */
+            right: 0; /* Aligns it to the right side */
+            animation: moveUpDownRight 5s ease-in-out infinite; /* Moves right side up and down */
+        }
+
+        /* Keyframes for Moving Up and Down (Left Side) */
+        @keyframes moveUpDownLeft {
+            0% {
+                top: 0; /* Starts from the top */
+            }
+            50% {
+                top: 90%; /* Moves to near the bottom */
+            }
+            100% {
+                top: 0; /* Returns to the top */
+            }
+        }
+
+        /* Keyframes for Moving Up and Down (Right Side) */
+        @keyframes moveUpDownRight {
+            0% {
+                top: 0; /* Starts from the top */
+            }
+            50% {
+                top: 90%; /* Moves to near the bottom */
+            }
+            100% {
+                top: 0; /* Returns to the top */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Image -->
+    <div class="background-image"></div>
+
+    <!-- Moving Image on Left Side -->
+    <img class="moving-image" src="images/moving.jpeg" alt="Moving Image Left">
+
+    <!-- Moving Image on Right Side -->
+    <img class="moving-image right" src="images/moving.jpeg" alt="Moving Image Right">
+
+    <header>
+        <h1>Claims Admin Memory Album</h1>
+        <p>Welcome to my personal photo album. Here's a collection of my favorite memories ❤︎ ⸜(｡˃ ᵕ ˂ )⸝♡ !</p>
+    </header>
+
+    <div class="gallery">
+        <!-- Image 1 -->
+        <div class="image-item">
+            <img src="bert.jpg" alt="Memory 1">
+        </div>
+        <!-- Image 2 -->
+        <div class="image-item">
+            <img src="cza.jpg" alt="Memory 2">
+        </div>
+        <!-- Image 3 -->
+        <div class="image-item">
+            <img src="tine.jpeg" alt="Memory 3">
+        </div>
+        <!-- Image 4 -->
+        <div class="image-item">
+            <img src="trio.jpeg" alt="Memory 4">
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Photo Album. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
