@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gilbert's Album</title>
+    <style>
+        /* Resetting styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page styling for Gilbert's album */
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #fff; /* White text */
+            line-height: 1.6;
+            height: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            background-color: black; /* Set background color to black */
+            padding: 20px;
+        }
+
+        /* Heart CSS - Positioned in the center of the page */
+        body::before {
+            content: "❤"; /* Heart symbol */
+            font-size: 5em; /* Large heart */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Center the heart */
+            color: white; /* Make heart white */
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #fff;
+        }
+
+        header h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        .album-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            width: 80%;
+            max-width: 1200px;
+        }
+
+        .album-gallery .image-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            min-height: 350px;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .album-gallery .image-item img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+        }
+
+        .album-gallery .image-item p {
+            font-size: 1.2em;
+            color: #333;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* Back Button Styling */
+        .back-button {
+            position: absolute;
+            top: 20px; /* Adjust the distance from the top */
+            left: 20px; /* Adjust the distance from the left */
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+            color: white; /* White text */
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            text-decoration: none; /* Removes the underline */
+            z-index: 5; /* Ensure it stays above other content */
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back Button -->
+    <a href="index.html" class="back-button">⬅ Back to Home</a>
+
+    <header>
+        <h1>Gilbert's Photos Album ✧🎀🏻💌💓</h1>
+        <p>Here are the cherished memories of Gilbert (˵ •̀ ᴗ - ˵ ) .</p>
+    </header>
+
+    <div class="album-gallery">
+        <!-- Add images for Gilbert's album -->
+        <div class="image-item">
+            <img src="images/gilbert1.jpeg" alt="Gilbert's Photo 1">
+            <p>Gilbert's Breaktime Shoot</p>
+        </div>
+
+        <div class="image-item">
+            <img src="images/gilbert2.jpeg" alt="Gilbert's Photo 2">
+            <p>Holiday with Gilbert</p>
+        </div>
+     
+        <div class="image-item">
+            <img src="images/gilbert3.jpeg" alt="Gilbert's Photo 3">
+            <p>Holiday with Gilbert</p>
+        </div>
+
+        <div class="image-item">
+            <img src="images/gilbert4.jpeg" alt="Gilbert's Photo 4">
+            <p>Gilbert's Alabang shoot</p>
+        </div>
+
+        <div class="image-item">
+            <img src="images/gilbert5.jpeg" alt="Gilbert's Photo 5">
+            <p>Gilbert's Friend house</p>
+        </div>
+
+        <div class="image-item">
+            <img src="images/gilbert6.jpeg" alt="Gilbert's Photo 6">
+            <p>Gilbert's on Chowking</p>
+        </div>
+
+        <div class="image-item">
+            <img src="images/gilbert7.jpeg" alt="Gilbert's Photo 7">
+            <p>Gilbert's on Jollibee</p>
+        </div>
+    </div>
+
+</body>
+</html>

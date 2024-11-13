@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Christine Joy's Album</title>
+    <style>
+        /* Resetting styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Page styling for Album 3 (Christine Joy's album) */
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #fff; /* White text */
+            line-height: 1.6;
+            height: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            background-color: lightblue; /* Set background color to light blue */
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #fff;
+        }
+
+        header h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        .album-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            width: 80%;
+            max-width: 1200px;
+        }
+
+        .album-gallery .image-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            min-height: 350px;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .album-gallery .image-item img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+        }
+
+        .album-gallery .image-item p {
+            font-size: 1.2em;
+            color: #333;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* Back Button Styling */
+        .back-button {
+            position: absolute;
+            top: 20px; /* Adjust the distance from the top */
+            left: 20px; /* Adjust the distance from the left */
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+            color: white; /* White text */
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            text-decoration: none; /* Removes the underline */
+            z-index: 5; /* Ensure it stays above other content */
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Back Button -->
+    <a href="index.html" class="back-button">⬅ Back to Home</a>
+
+    <header>
+        <h1>Christine Joy's Photo Album 🌸🌷👑💗🐻‍❄️</h1>
+        <p>Here are the cherished memories of Christine Joy ε(´｡•᎑•`)っ 💕.</p>
+    </header>
+
+    <div class="album-gallery">
+        <!-- Add images for Christine Joy's album -->
+        <div class="image-item">
+            <img src="images/tine1.png" alt="Christine Joy's Photo 1">
+            <p>Christine Joy at the Beach</p>
+        </div>
+
+        <div class="image-item">
+            <img src="images/tine2.png" alt="Christine Joy's Photo 2">
+            <p>Christine Joy with Friends</p>
+        </div>
+
+        <div class="image-item">
+            <img src="images/tine3.png" alt="Christine Joy's Photo 3">
+            <p>Christine Joy at the Park</p>
+        </div>
+
+        <div class="image-item">
+            <img src="images/tine4.png" alt="Christine Joy's Photo 4">
+            <p>Christine Joy's Birthday Celebration</p>
+        </div>
+
+        <div class="image-item">
+            <img src="images/tine5.png" alt="Christine Joy's Photo 5">
+            <p>Christine Joy on a Road Trip</p>
+        </div>
+
+        <div class="image-item">
+            <img src="images/tine6.jpeg" alt="Christine Joy's Photo 6">
+            <p>Christine Joy's Graduation</p>
+        </div>
+
+        <div class="image-item">
+            <img src="images/tine7.jpeg" alt="Christine Joy's Photo 7">
+            <p>Christine Joy at the Café</p>
+        </div>
+    </div>
+
+</body>
+</html>
