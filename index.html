@@ -77,14 +77,13 @@
             justify-content: center; /* Centers image horizontally */
             align-items: center; /* Centers image vertically */
             position: relative;
-            overflow: hidden;
             border-radius: 10px;
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
             background-color: #fff; /* White background behind image */
-            height: 350px; /* Fixed height for all images */
-            min-height: 300px; /* Ensures consistent sizing */
-            overflow: hidden;
+            min-height: 350px; /* Ensures consistent height for all images */
+            flex-direction: column;
+            text-align: center;
         }
 
         .gallery .image-item:hover {
@@ -93,7 +92,8 @@
 
         .gallery .image-item img {
             width: 100%;
-            height: 100%;
+            height: auto;
+            max-height: 300px; /* Restricts image height to ensure space for the name */
             object-fit: cover; /* Ensures the image fills the box while maintaining aspect ratio */
             object-position: center; /* Centers the image within the box */
             border-radius: 10px;
@@ -102,6 +102,14 @@
 
         .gallery .image-item img:hover {
             opacity: 0.8;
+        }
+
+        /* Image Names Below the Image */
+        .gallery .image-item p {
+            font-size: 1.2em;
+            color: #333; /* Text color */
+            margin-top: 10px;
+            font-weight: bold;
         }
 
         /* Footer */
@@ -178,22 +186,37 @@
     </header>
 
     <div class="gallery">
-        <!-- Image 1 -->
-        <div class="image-item">
-            <img src="bert.jpg" alt="Memory 1">
-        </div>
-        <!-- Image 2 -->
-        <div class="image-item">
-            <img src="cza.jpg" alt="Memory 2">
-        </div>
-        <!-- Image 3 -->
-        <div class="image-item">
-            <img src="tine.jpeg" alt="Memory 3">
-        </div>
-        <!-- Image 4 -->
-        <div class="image-item">
-            <img src="trio.jpeg" alt="Memory 4">
-        </div>
+        <!-- Link to Album 1 (Gilbert) -->
+        <a href="album1.html">
+            <div class="image-item">
+                <img src="bert.jpg" alt="Memory 1">
+                <p>Gilbert (Photos)</p>
+            </div>
+        </a>
+
+        <!-- Link to Album 2 (Czarina) -->
+        <a href="album2.html">
+            <div class="image-item">
+                <img src="cza.jpg" alt="Memory 2">
+                <p>Czarina (Photos)</p>
+            </div>
+        </a>
+
+        <!-- Link to Album 3 (Christine Joy) -->
+        <a href="album3.html">
+            <div class="image-item">
+                <img src="tine.jpeg" alt="Memory 3">
+                <p>Christine Joy (Photos)</p>
+            </div>
+        </a>
+
+        <!-- Link to Album 4 (Admin Album) -->
+        <a href="album4.html">
+            <div class="image-item">
+                <img src="trio.jpeg" alt="Memory 4">
+                <p>Admin Album</p>
+            </div>
+        </a>
     </div>
 
     <footer>
